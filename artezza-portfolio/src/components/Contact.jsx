@@ -58,6 +58,12 @@ const Contact = () => (
           </div>
         </div>
         <div className="flex items-center justify-center">
+          {/*
+            CV Download button is commented out to prevent 404 errors.
+            To re-enable, add your CV to the `public/` folder as `cv-dew-gimhan.pdf`,
+            commit and push the file, and then uncomment the <a ...> tag below.
+          */}
+          {/*
           <a
             href="/cv-dew-gimhan.pdf"
             download
@@ -66,6 +72,7 @@ const Contact = () => (
             <FaDownload className="mr-3 w-6 h-6" />
             Download CV
           </a>
+          */}
         </div>
       </div>
     </div>
