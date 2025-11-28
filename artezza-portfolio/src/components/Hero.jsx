@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="order-2 lg:order-1 flex justify-center">
             <div className="relative">
               <img
-                src="/public/Dew Gimhan .png"
+                src="/Dew Gimhan .png"
                 alt="Dew Gimhan"
                 className="w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-[#CCA000] shadow-2xl"
               />
