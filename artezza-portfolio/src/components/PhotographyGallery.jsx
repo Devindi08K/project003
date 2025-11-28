@@ -1,20 +1,20 @@
 import React from 'react';
 
 const PhotographyGallery = () => {
-  // Placeholder images - replace with actual photo paths
+  // Correct paths for images in the public/photos/ folder
   const photos = [
-    '/src/assets/photos/photo1.jpg',
-    '/src/assets/photos/photo2.jpg',
-    '/src/assets/photos/photo3.jpg',
-    '/src/assets/photos/photo4.jpg',
-    '/src/assets/photos/photo5.jpg',
-    '/src/assets/photos/photo6.jpg',
-    '/src/assets/photos/photo7.jpg',
-    '/src/assets/photos/photo8.jpg',
-    '/src/assets/photos/photo9.jpg',
-    '/src/assets/photos/photo10.jpg',
-    '/src/assets/photos/photo11.jpg',
-    '/src/assets/photos/photo12.jpg'
+    '/photos/photo1.jpg',
+    '/photos/photo2.jpg',
+    '/photos/photo3.jpg',
+    '/photos/photo4.jpg',
+    '/photos/photo5.jpg',
+    '/photos/photo6.jpg',
+    '/photos/photo7.jpg',
+    '/photos/photo8.jpg',
+    '/photos/photo9.jpg',
+    '/photos/photo10.jpg',
+    '/photos/photo11.jpg',
+    '/photos/photo12.jpg'
   ];
 
   return (

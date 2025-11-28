@@ -25,7 +25,7 @@ const About = () => {
 
           <div className="flex justify-center">
             <img
-              src="/profile PHOTO.png"
+              src="/artezza-logo.png"
               alt="Artezza Brand Logo"
               className="w-80 h-80 object-contain rounded-lg shadow-lg"
             />
