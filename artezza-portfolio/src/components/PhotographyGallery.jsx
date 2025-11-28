@@ -1,21 +1,39 @@
 import React from 'react';
 
 const PhotographyGallery = () => {
-  // Correct paths for images in the public/photos/ folder
+  // Photos are commented out to prevent 404 errors during deployment.
+  // To re-enable, add your photos to the `public/photos/` folder and uncomment these lines.
   const photos = [
-    '/photos/photo1.jpg',
-    '/photos/photo2.jpg',
-    '/photos/photo3.jpg',
-    '/photos/photo4.jpg',
-    '/photos/photo5.jpg',
-    '/photos/photo6.jpg',
-    '/photos/photo7.jpg',
-    '/photos/photo8.jpg',
-    '/photos/photo9.jpg',
-    '/photos/photo10.jpg',
-    '/photos/photo11.jpg',
-    '/photos/photo12.jpg'
+    // '/photos/photo1.jpg',
+    // '/photos/photo2.jpg',
+    // '/photos/photo3.jpg',
+    // '/photos/photo4.jpg',
+    // '/photos/photo5.jpg',
+    // '/photos/photo6.jpg',
+    // '/photos/photo7.jpg',
+    // '/photos/photo8.jpg',
+    // '/photos/photo9.jpg',
+    // '/photos/photo10.jpg',
+    // '/photos/photo11.jpg',
+    // '/photos/photo12.jpg'
   ];
+
+  // If there are no photos, we can optionally render nothing or a placeholder.
+  // For now, the section will render with an empty grid.
+  if (photos.length === 0) {
+    return (
+        <section id="photography" className="py-20 bg-[#001D3D]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Photography <span className="text-[#CCA000]">Portfolio</span>
+                    </h2>
+                    <p className="text-gray-400">Gallery coming soon...</p>
+                </div>
+            </div>
+        </section>
+    );
+  }
 
   return (
     <section id="photography" className="py-20 bg-[#001D3D]">
