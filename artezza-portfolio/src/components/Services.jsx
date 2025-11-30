@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaCamera, FaPalette, FaVideo, FaLaptopCode, FaRobot } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const services = [
   {
@@ -37,18 +38,32 @@ const services = [
 const Services = () => (
   <section id="services" className="py-20 bg-[#000814]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
           What I <span className="text-[#CCA000]">Offer</span>
         </h2>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, idx) => (
-          <div key={idx} className="bg-[#003566] p-6 rounded-lg hover:bg-[#001D3D] transition-colors duration-300">
+          <motion.div
+            key={idx}
+            className="bg-[#003566] p-6 rounded-lg hover:bg-[#001D3D] transition-colors duration-300 shadow-lg hover:shadow-xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: idx * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+          >
             <div className="text-4xl mb-4 flex justify-center">{service.icon}</div>
             <h3 className="text-xl font-bold text-[#F0CB46] mb-3">{service.title}</h3>
             <p className="text-gray-300">{service.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
