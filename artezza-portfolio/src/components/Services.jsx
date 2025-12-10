@@ -24,7 +24,7 @@ const services = [
     icon: <FaVideo className="text-[#CCA000]" />
   },
   {
-    title: "IT Support & Basic Web Development",
+    title: "IT Support & Web Development",
     description: "Technical solutions and web development services",
     icon: <FaLaptopCode className="text-[#CCA000]" />
   },

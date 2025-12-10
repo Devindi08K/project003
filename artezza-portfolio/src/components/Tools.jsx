@@ -2,17 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const tools = [
-  { name: "Photoshop", logo: "/artezza-logo.png" },
-  { name: "CapCut", logo: "/artezza-logo.png" },
-  { name: "Canva", logo: "/artezza-logo.png" },
-  { name: "Lightroom", logo: "/artezza-logo.png" },
-  { name: "Microsoft Office", logo: "/artezza-logo.png" },
-  { name: "Meta Business Suite", logo: "/artezza-logo.png" },
-  { name: "Google Workspace", logo: "/artezza-logo.png" },
-  { name: "ChatGPT", logo: "/artezza-logo.png" },
-  { name: "Gemini", logo: "/artezza-logo.png" },
-  { name: "MidJourney", logo: "/artezza-logo.png" },
-  { name: "Canva AI", logo: "/artezza-logo.png" },
+  { name: "Photoshop", logo: "/logos/photoshop-logo.png" },
+  { name: "CapCut", logo: "/logos/capcut-logo.png" },
+  { name: "Canva", logo: "/logos/canva-logo.png" },
+  { name: "Lightroom", logo: "/logos/lightroom-logo.png" },
+  { name: "Microsoft Office", logo: "/logos/microsoft-office-logo.png" },
+  { name: "Meta Business Suite", logo: "/logos/meta-business-suite-logo.png" },
+  { name: "Google Workspace", logo: "/logos/google-workspace-logo.png" },
+  { name: "ChatGPT", logo: "/logos/chatgpt-logo.png" },
+  { name: "Gemini", logo: "/logos/gemini-logo.png" },
+  { name: "MidJourney", logo: "/logos/midjourney-logo.png" },
+  { name: "Canva AI", logo: "/logos/canva-ai-logo.png" },
 ];
 
 const Tools = () => (
@@ -33,18 +33,18 @@ const Tools = () => (
         {tools.map((tool, idx) => (
           <motion.div
             key={idx}
-            className="bg-[#003566] p-4 rounded-lg text-center hover:bg-[#000814] transition-all duration-300 group shadow-lg hover:shadow-xl"
-            initial={{ opacity: 0, scale: 0.8 }}
+            className="relative bg-gradient-to-br from-[#00223a] to-[#003566] p-4 rounded-lg text-center transition-all duration-300 group shadow-lg hover:shadow-xl"
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: idx * 0.05 }}
+            transition={{ duration: 0.5, delay: idx * 0.04 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.03 }}
           >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300 flex justify-center">
+            <div className="mx-auto w-16 h-16 rounded-md bg-white/5 flex items-center justify-center mb-3">
               <img
                 src={tool.logo}
                 alt={tool.name}
-                className="w-12 h-12 object-contain rounded-md"
+                className="w-12 h-12 object-contain"
               />
             </div>
             <p className="text-sm text-gray-300 font-medium">{tool.name}</p>

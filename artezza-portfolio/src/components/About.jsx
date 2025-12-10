@@ -44,7 +44,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <img
-              src="/artezza-logo.png"
+              src="/Profile-removebg-preview (2).png"
               alt="Artezza Brand Logo"
               className="w-80 h-80 object-cover rounded-full shadow-lg border-2 border-[#CCA000] hover:border-[#F0CB46] transition-colors duration-300"
             />

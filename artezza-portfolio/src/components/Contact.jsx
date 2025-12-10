@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaUser, FaEnvelope, FaPhone, FaFacebook, FaLinkedin, FaDownload } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaFacebook, FaLinkedin, FaDownload, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { SiBehance } from 'react-icons/si';
 
 const Contact = () => (
   <section id="contact" className="py-20 bg-[#000814]">
@@ -15,7 +16,7 @@ const Contact = () => (
             <FaUser className="text-2xl text-[#CCA000]" />
             <div>
               <h3 className="text-xl font-bold text-[#F0CB46]">Name</h3>
-              <p className="text-gray-300">Dew Gimhan</p>
+              <p className="text-gray-300">Dew Gimhan Liyanarachchi</p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -47,6 +48,26 @@ const Contact = () => (
             </div>
           </div>
           <div className="flex items-center space-x-4">
+            <FaInstagram className="text-2xl text-[#CCA000]" />
+            <div>
+              <h3 className="text-xl font-bold text-[#F0CB46]">Instagram</h3>
+              <a href="https://www.instagram.com/dew_liyanarachchi/?igsh=ZmJ4aDVpZHd2cTNu#" target="_blank" rel="noopener noreferrer"
+                className="text-[#CCA000] hover:text-[#F0CB46] transition-colors">
+                @dew_liyanarachchi
+              </a>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <FaTiktok className="text-2xl text-[#CCA000]" />
+            <div>
+              <h3 className="text-xl font-bold text-[#F0CB46]">TikTok</h3>
+              <a href="https://www.tiktok.com/@lumierelense?_t=ZS-8xCRltf3Nen&_r=1" target="_blank" rel="noopener noreferrer"
+                className="text-[#CCA000] hover:text-[#F0CB46] transition-colors">
+                @lumierelense
+              </a>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
             <FaLinkedin className="text-2xl text-[#CCA000]" />
             <div>
               <h3 className="text-xl font-bold text-[#F0CB46]">LinkedIn</h3>
@@ -56,16 +77,31 @@ const Contact = () => (
               </a>
             </div>
           </div>
+          <div className="flex items-center space-x-4">
+            <SiBehance className="text-2xl text-[#CCA000]" />
+            <div>
+              <h3 className="text-xl font-bold text-[#F0CB46]">Behance</h3>
+              <a href="https://www.behance.net/gallery/207472057/My-works" target="_blank" rel="noopener noreferrer"
+                className="text-[#CCA000] hover:text-[#F0CB46] transition-colors">
+                My Works
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center space-y-8">
           <a
             href="/cv-dew-gimhan.pdf"
             download
-            className="bg-[#CCA000] hover:bg-[#F0CB46] text-[#000814] font-bold py-4 px-8 rounded-lg text-xl transition-colors duration-300 transform hover:scale-105 inline-flex items-center"
+            className="bg-[#CCA000] hover:bg-[#F0CB46] text-[#000814] font-bold py-4 px-8 rounded-lg text-xl transition-colors duration-300 transform hover:scale-105 inline-flex items-center mb-6"
           >
             <FaDownload className="mr-3 w-6 h-6" />
             Download CV
           </a>
+          <img
+            src="/signature_1-removebg-preview.png"
+            alt="Signature"
+            className="w-80 h-auto object-contain opacity-90"
+          />
         </div>
       </div>
     </div>

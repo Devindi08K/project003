@@ -16,8 +16,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Brand */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center space-x-2">
             <span className="text-2xl font-bold text-[#CCA000] tracking-wide">Dew Gimhan Portfolio</span>
+            <span className="text-2xl font-bold text-white mx-2">|</span>
+            <a
+              href="/artezza"
+              className="text-2xl font-bold text-[#CCA000] hover:text-[#F0CB46] underline transition-colors duration-300"
+            >
+              Artezza
+            </a>
           </div>
 
           {/* Desktop Menu */}

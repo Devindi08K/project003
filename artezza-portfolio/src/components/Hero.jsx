@@ -9,134 +9,91 @@ const Hero = () => {
     }
   };
 
-  // Animation variants for staggered entrance
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
-    },
-  };
-
-  // Photo animation variants
-  const photoVariants = {
-    hidden: { opacity: 0, x: 100, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: { duration: 1, ease: 'easeOut', delay: 0.5 },
-    },
-  };
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-16 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-[#001D3D] overflow-hidden"
     >
-      {/* Animated Background Gradient */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{
-          background: 'linear-gradient(180deg, #000814 0%, #001D3D 100%)',
-        }}
-        animate={{
-          background: [
-            'linear-gradient(180deg, #000814 0%, #001D3D 100%)',
-            'linear-gradient(180deg, #000814 0%, #003566 50%, #001D3D 100%)',
-            'linear-gradient(180deg, #000814 0%, #001D3D 100%)',
-          ],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-      />
+      {/* Big dark blue rings (decorative background) */}
+      <div className="absolute top-0 left-0 w-96 h-96 -translate-x-1/2 -translate-y-1/2 bg-[#000814] rounded-full opacity-60"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 translate-x-1/2 translate-y-1/2 bg-[#000814] rounded-full opacity-60"></div>
 
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 hero-bg pointer-events-none" />
-
-      <div className="w-full max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Right: Portrait with Enhanced Animations */}
+      {/* Main container for card and image */}
+      <div className="relative max-w-4xl w-full mx-auto">
+        {/* Dew Gimhan image - positioned absolutely on the left */}
         <motion.div
-          className="absolute right-0 top-1/6 transform -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[520px] z-10"
-          variants={photoVariants}
-          initial="hidden"
-          animate="visible"
+          className="absolute -top-24 -left-[160px] z-20 pointer-events-none"
+          initial={{ opacity: 0, x: -200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
         >
-          <motion.img
-            src="/dew-gimhan.png"
+          <img
+            src="/Dew_Gimhan_-removebg-preview.png"
             alt="Dew Gimhan"
-            className="w-full h-full object-cover rounded-2xl shadow-2xl"
-            style={{ boxShadow: '0 8px 48px 0 #00356680' }}
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-          />
-          {/* Enhanced vignette with animation */}
-          <motion.div
-            className="absolute left-0 top-0 h-full w-1/3 pointer-events-none"
-            style={{
-              background: 'linear-gradient(90deg, #000814e0 60%, transparent 100%)',
-              filter: 'blur(10px)',
-              borderTopLeftRadius: '1rem',
-              borderBottomLeftRadius: '1rem',
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
-            transition={{ duration: 1, delay: 1 }}
+            className="w-[450px] drop-shadow-2xl"
           />
         </motion.div>
 
-        {/* Left: Text with Animations */}
-        <motion.div
-          className="relative z-20 flex-1 py-12 lg:pr-16"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="max-w-xl">
-            <motion.h1
-              className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-              variants={itemVariants}
-            >
-              Hello, I'm <span className="text-[#CCA000]">Dew Gimhan</span>
-            </motion.h1>
-            <motion.h2
-              className="text-2xl lg:text-3xl text-white mb-4 font-medium"
-              variants={itemVariants}
-            >
-              Social Media Manager & Photographer
-            </motion.h2>
-            <motion.p
-              className="text-lg text-white/90 mb-8 leading-relaxed"
-              variants={itemVariants}
-            >
-              Crafting engaging content and stunning visuals to bring your ideas to
-              life.
-            </motion.p>
-            <motion.button
-              onClick={scrollToProjects}
-              className="px-8 py-3 border-2 border-[#CCA000] text-[#CCA000] bg-transparent hover:bg-[#003566] hover:text-[#F0CB46] transition-all duration-300 rounded-md font-semibold shadow-lg hover:shadow-[#CCA000]/50"
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: '0 0 20px #CCA00050',
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Explore My Portfolio
-            </motion.button>
+        {/* Glowing glass card */}
+        <div className="relative z-10">
+          {/* Glow effect */}
+          <div className="absolute inset-0 rounded-3xl bg-[#CCA000] blur-3xl opacity-20 -z-10"></div>
+          <div className="absolute inset-0 rounded-3xl bg-[#F0CB46] blur-2xl opacity-30 -z-10"></div>
+          <div className="absolute inset-0 rounded-3xl bg-white blur-xl opacity-10 -z-10"></div>
+
+          {/* Actual card */}
+          <div className="relative bg-[#003566]/80 backdrop-blur-2xl rounded-3xl shadow-2xl border border-[#003566]/50 overflow-hidden">
+            {/* Content inside card - pushed to the right */}
+            <div className="p-10 pl-12 md:pl-56 min-h-[380px] flex flex-col justify-center">
+              <motion.h1
+                className="text-4xl font-black tracking-tight mb-6"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                Hello, I'm <span className="text-[#CCA000]">Dew Gimhan</span>
+              </motion.h1>
+              <motion.p
+                className="text-gray-300 leading-relaxed text-lg mb-8 max-w-md"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                Social Media Manager & Photographer. Creativity made simple.
+              </motion.p>
+
+              {/* Buttons */}
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+              >
+                <button
+                  onClick={scrollToProjects}
+                  className="px-8 py-4 bg-[#CCA000] hover:bg-[#F0CB46] rounded-full font-semibold text-[#000814] shadow-lg shadow-[#CCA000]/50 transition"
+                >
+                  Explore My Portfolio
+                </button>
+                <a
+                  href="/artezza"
+                  className="px-8 py-4 bg-[#003566] hover:bg-[#001D3D] border border-[#CCA000] rounded-full font-semibold text-[#CCA000] hover:text-[#F0CB46] shadow-lg shadow-[#CCA000]/50 transition text-center"
+                >
+                  View Artezza Brand
+                </a>
+              </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+
+      {/* Small logo bottom left */}
+      <div className="absolute bottom-8 left-8 z-20 flex items-center gap-3 text-white/80">
+        <div className="w-12 h-12 bg-gradient-to-br from-[#CCA000] to-[#F0CB46] rounded-lg"></div>
+        <div>
+          <div className="font-bold">Artezza</div>
+          <div className="text-xs">Creative Vision & Excellence</div>
+        </div>
       </div>
     </section>
   );
