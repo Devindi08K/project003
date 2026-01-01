@@ -20,9 +20,9 @@ const Hero = () => {
 
       {/* Main container for card and image */}
       <div className="relative max-w-4xl w-full mx-auto">
-        {/* Dew Gimhan image - positioned absolutely on the left */}
+        {/* Dew Gimhan image - positioned absolutely on the left, hidden on mobile */}
         <motion.div
-          className="absolute -top-24 -left-[160px] z-20 pointer-events-none"
+          className="absolute -top-24 -left-[160px] z-20 pointer-events-none hidden md:block"
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
@@ -35,16 +35,16 @@ const Hero = () => {
         </motion.div>
 
         {/* Glowing glass card */}
-        <div className="relative z-10">
+        <div className="relative z-10 md:ml-0">
           {/* Glow effect */}
-          <div className="absolute inset-0 rounded-3xl bg-[#CCA000] blur-3xl opacity-20 -z-10"></div>
-          <div className="absolute inset-0 rounded-3xl bg-[#F0CB46] blur-2xl opacity-30 -z-10"></div>
-          <div className="absolute inset-0 rounded-3xl bg-white blur-xl opacity-10 -z-10"></div>
+          <div className="absolute inset-0 rounded-3xl bg-cyan-400 blur-3xl opacity-30 -z-10"></div>
+          <div className="absolute inset-0 rounded-3xl bg-blue-400 blur-2xl opacity-40 -z-10"></div>
+          <div className="absolute inset-0 rounded-3xl bg-sky-300 blur-xl opacity-20 -z-10"></div>
 
           {/* Actual card */}
           <div className="relative bg-[#003566]/80 backdrop-blur-2xl rounded-3xl shadow-2xl border border-[#003566]/50 overflow-hidden">
-            {/* Content inside card - pushed to the right */}
-            <div className="p-10 pl-12 md:pl-56 min-h-[380px] flex flex-col justify-center">
+            {/* Content inside card - centered on mobile, pushed right on desktop */}
+            <div className="p-10 md:pl-56 min-h-[380px] flex flex-col justify-center text-center md:text-left">
               <motion.h1
                 className="text-4xl font-black tracking-tight mb-6"
                 initial={{ opacity: 0, y: 50 }}
@@ -54,32 +54,32 @@ const Hero = () => {
                 Hello, I'm <span className="text-[#CCA000]">Dew Gimhan</span>
               </motion.h1>
               <motion.p
-                className="text-gray-300 leading-relaxed text-lg mb-8 max-w-md"
+                className="text-gray-300 leading-relaxed text-lg mb-8 max-w-md mx-auto md:mx-0"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                Social Media Manager & Photographer. Creativity made simple.
+                Social Media Manager & Photographer. Transforming ideas into captivating visuals with seamless creativity and strategic execution.
               </motion.p>
 
               {/* Buttons */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.9 }}
               >
                 <button
                   onClick={scrollToProjects}
-                  className="px-8 py-4 bg-[#CCA000] hover:bg-[#F0CB46] rounded-full font-semibold text-[#000814] shadow-lg shadow-[#CCA000]/50 transition"
+                  className="px-8 py-4 bg-[#CCA000] hover:bg-[#F0CB46] rounded-full font-semibold text-[#000814] shadow-lg shadow-cyan-500/50 transition"
                 >
-                  Explore My Portfolio
+                  Explore Me
                 </button>
                 <a
                   href="/artezza"
-                  className="px-8 py-4 bg-[#003566] hover:bg-[#001D3D] border border-[#CCA000] rounded-full font-semibold text-[#CCA000] hover:text-[#F0CB46] shadow-lg shadow-[#CCA000]/50 transition text-center"
+                  className="px-8 py-4 bg-[#003566] hover:bg-[#001D3D] border border-[#CCA000] rounded-full font-semibold text-[#CCA000] hover:text-[#F0CB46] shadow-lg shadow-cyan-500/50 transition text-center"
                 >
-                  View Artezza Brand
+                  Artezza
                 </a>
               </motion.div>
             </div>
@@ -87,14 +87,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Small logo bottom left */}
-      <div className="absolute bottom-8 left-8 z-20 flex items-center gap-3 text-white/80">
-        <div className="w-12 h-12 bg-gradient-to-br from-[#CCA000] to-[#F0CB46] rounded-lg"></div>
-        <div>
-          <div className="font-bold">Artezza</div>
-          <div className="text-xs">Creative Vision & Excellence</div>
-        </div>
-      </div>
+      
     </section>
   );
 };
