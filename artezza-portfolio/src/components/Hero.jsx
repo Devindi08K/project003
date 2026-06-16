@@ -59,7 +59,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                Social Media Manager & Photographer. Transforming ideas into captivating visuals with seamless creativity and strategic execution.
+                 Restaurant and Bar Service Trainee, Social Media Manager & Photographer. Passionate about guest service, creativity, and transforming ideas into captivating visuals through strategic execution.
               </motion.p>
 
               {/* Buttons */}

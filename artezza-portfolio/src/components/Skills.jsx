@@ -3,6 +3,18 @@ import { motion } from 'framer-motion';
 
 const skillCategories = [
   {
+    title: "Restaurant and bar Skills ",
+    skills: [
+          "Flairing",
+          "cocktail making",
+          "mocktail making",
+          "customer handling ",
+          "Tray balancing ",
+          "Food knowledge ",
+          "Bar service"
+    ]
+  },
+  {
     title: "Social Media Skills",
     skills: [
       "Content Creation (Posts, Reels, Stories)",

@@ -1,8 +1,13 @@
 import React from 'react';
-import { FaFacebook, FaCamera, FaPalette, FaVideo, FaLaptopCode, FaRobot } from 'react-icons/fa';
+import { FaFacebook, FaCamera, FaPalette, FaVideo, FaLaptopCode, FaRobot, FaVine, FaBars } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const services = [
+  {
+    title: "Restaurant & Bar Service",
+    description: "Professional food and beverage service, customer care, order handling, and teamwork to create excellent guest experiences.",
+    icon: <FaBars className="text-[#CCA000]" />
+  },
   {
     title: "Social Media Management",
     description: "Content creation, scheduling, analytics, community management",

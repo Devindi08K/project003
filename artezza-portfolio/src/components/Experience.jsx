@@ -3,6 +3,10 @@ import { FaAward, FaGraduationCap, FaTools } from 'react-icons/fa';
 
 const experiences = [
   {
+    title: " SLITHM - Sri Lankan Institute of Tourism & Hotel Management ",
+    icon: <FaGraduationCap className="text-[#CCA000]" />
+  },
+  {
     title: "1+ year of professional Social Media Management",
     icon: <FaAward className="text-[#CCA000]" />
   },
