@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaCamera, FaPalette, FaVideo, FaLaptopCode, FaRobot, FaVine, FaBars } from 'react-icons/fa';
+import { FaFacebook, FaCamera, FaPalette, FaVideo, FaLaptopCode, FaRobot, FaConciergeBell, FaBars } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const services = [
